@@ -35,6 +35,7 @@ $targetRegions = @($region1,$region2,$region3)
 New-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageDefinitionName -Name $versionName -Location $location -SourceId $SourceId -ReplicaCount 2 -StorageAccountType Standard_LRS -PublishingProfileExcludeFromLatest -PublishingProfileEndOfLifeDate $endOfLifeDate -TargetRegion $targetRegions
 ```
 
+
 ### Example 2
 ```powershell
 $osDiskImage = @{Id='https://bogus:122/subscriptions/000000e4-dbcb-4235-bd41-76deb9bd189d/resourceGroups/Mock_CrpRgName/providers/Microsoft.Compute/snapshots/dummyOsSnapshot'}
